@@ -9,6 +9,15 @@ import UIKit
 
 class ReceiverMeassageTextTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ReceiverImage: UIImageView!
+    
+    @IBOutlet weak var UserTextView: UIView!
+    
+    @IBOutlet weak var UserTextMessage: UILabel!
+    
+    @IBOutlet weak var Time: UILabel!
+    
+    @IBOutlet weak var Statusmessage: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
     @IBOutlet weak var tableView: UITableView!
+    
+    var DocumentId:String = "hi" 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +34,26 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        UserCell.UsersProfileImage.image = 
         return UserCell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("indexPath : \(indexPath)")
+        performSegue(withIdentifier: "ChatScreen", sender: self)
+        
+        
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChatScreen"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let Controller = segue.destination as! ChatScreeViewController
+                Controller.DocumentId = DocumentId
+            }
+        }
+    }
 }
+       
+
+
 
 struct ChatUsers {
     let name:String?

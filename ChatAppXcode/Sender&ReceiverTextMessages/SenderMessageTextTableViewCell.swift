@@ -9,6 +9,7 @@ import UIKit
 
 class SenderMessageTextTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var views: UIView!
     @IBOutlet weak var senderTextMessage: UILabel!
     @IBOutlet weak var deiverstatus: UILabel!
     @IBOutlet weak var timetext: UILabel!
@@ -16,10 +17,13 @@ class SenderMessageTextTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        views.layer.cornerRadius = 10
+        views.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        views.layer.cornerRadius = 20
     }
     
 }

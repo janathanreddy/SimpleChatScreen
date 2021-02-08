@@ -11,7 +11,6 @@
         <!--Chat Message-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatAppXcode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -136,6 +135,7 @@
                         <segue destination="oMB-Ns-lPM" kind="show" identifier="ChatScreen" id="H6v-O1-eWj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="75"/>
         </scene>
@@ -224,6 +224,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="f3G-fE-QqG"/>
                     <connections>
+                        <outlet property="TextShouldReturn" destination="c0T-dE-M3c" id="mxF-dL-9Ts"/>
                         <outlet property="tableView" destination="rq9-pv-BCx" id="Ocx-hY-Txm"/>
                     </connections>
                 </viewController>
