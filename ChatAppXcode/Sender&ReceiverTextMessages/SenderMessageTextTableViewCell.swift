@@ -19,6 +19,8 @@ class SenderMessageTextTableViewCell: UITableViewCell {
         super.awakeFromNib()
         views.layer.cornerRadius = 10
         views.layer.masksToBounds = true
+        sendercahtimage.layer.cornerRadius = 13
+        sendercahtimage.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -18,10 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-8q-7be">
-                        <rect key="frame" x="89.5" y="33.5" width="255.5" height="49.5"/>
+                        <rect key="frame" x="89.5" y="33" width="255.5" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-M9-sVy">
-                                <rect key="frame" x="8" y="15" width="239.5" height="20.5"/>
+                                <rect key="frame" x="8" y="8" width="239.5" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="239.5" id="5Ph-jp-8A4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -29,15 +32,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Ogt-M9-sVy" secondAttribute="bottom" constant="14" id="7l1-tc-w1K"/>
+                            <constraint firstItem="Ogt-M9-sVy" firstAttribute="top" secondItem="fFV-8q-7be" secondAttribute="top" constant="8" id="89Q-rt-ZLC"/>
                             <constraint firstAttribute="trailing" secondItem="Ogt-M9-sVy" secondAttribute="trailing" constant="8" id="Dd5-bU-mYo"/>
-                            <constraint firstItem="Ogt-M9-sVy" firstAttribute="top" secondItem="fFV-8q-7be" secondAttribute="top" constant="15" id="MCe-TM-5YS"/>
+                            <constraint firstAttribute="bottom" secondItem="Ogt-M9-sVy" secondAttribute="bottom" constant="7.5" id="nLG-pa-qcr"/>
                             <constraint firstItem="Ogt-M9-sVy" firstAttribute="leading" secondItem="fFV-8q-7be" secondAttribute="leading" constant="8" id="ork-aw-VnY"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYO-8O-44I">
-                        <rect key="frame" x="320" y="4" width="25" height="25.5"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUP-0U-igx">
                         <rect key="frame" x="313" y="84" width="32" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
@@ -50,6 +50,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="bYO-8O-44I">
+                        <rect key="frame" x="320" y="4" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="cTI-W2-xVK"/>
+                            <constraint firstAttribute="height" constant="25" id="zB3-Pe-0Ny"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="bYO-8O-44I" secondAttribute="trailing" constant="20" symbolic="YES" id="2WT-NI-6Nh"/>
@@ -58,12 +65,10 @@
                     <constraint firstAttribute="trailing" secondItem="fFV-8q-7be" secondAttribute="trailing" constant="20" symbolic="YES" id="94B-eE-nHt"/>
                     <constraint firstItem="bYO-8O-44I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="EsA-he-jbV"/>
                     <constraint firstAttribute="bottom" secondItem="cUP-0U-igx" secondAttribute="bottom" constant="6" id="I1Y-pm-z5z"/>
-                    <constraint firstItem="fFV-8q-7be" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="OvA-OS-6uT"/>
+                    <constraint firstItem="fFV-8q-7be" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" placeholder="YES" id="OvA-OS-6uT"/>
                     <constraint firstItem="fFV-8q-7be" firstAttribute="top" secondItem="bYO-8O-44I" secondAttribute="bottom" constant="4" id="TUf-9m-jQi"/>
-                    <constraint firstItem="0Pa-Sw-Abf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="273" id="XLn-Ru-G2R"/>
                     <constraint firstItem="cUP-0U-igx" firstAttribute="leading" secondItem="0Pa-Sw-Abf" secondAttribute="trailing" constant="8" symbolic="YES" id="mEY-pH-q3J"/>
                     <constraint firstItem="cUP-0U-igx" firstAttribute="top" secondItem="fFV-8q-7be" secondAttribute="bottom" constant="1" id="mXQ-Pc-gXm"/>
-                    <constraint firstItem="bYO-8O-44I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="320" id="zTa-Ft-G1M"/>
                     <constraint firstItem="0Pa-Sw-Abf" firstAttribute="top" secondItem="fFV-8q-7be" secondAttribute="bottom" constant="1" id="ztP-er-07k"/>
                 </constraints>
             </tableViewCellContentView>
@@ -79,6 +84,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="person" width="634" height="951"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

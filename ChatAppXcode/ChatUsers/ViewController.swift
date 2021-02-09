@@ -57,7 +57,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                     }
                 }
                     let source = snapshot.metadata.isFromCache ? "local cache" : "server"
-                    print("Metadata: Data fetched from \(source)")
+//                    print("Metadata: Data fetched from \(source)")
             if source == "local cache"{
                 Fire_store.collection("ChatUsers").document("FtZrP14cYYaXo23KmtS5").updateData(["onlinecheck": "offline"])
             }else if source == "server"{
